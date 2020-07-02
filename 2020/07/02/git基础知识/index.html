@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>极客之旅，由此启程 | YWHF&#39;s blog</title>
+  <title>git基础知识 | YWHF&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="序　　十年前，一个小男孩看了“黑客帝国”系列电影，在心中萌发了当黑客的念头。其实他当时想当的是电影里能够飙车，会功夫以一敌百的“黑客”，不是敲代码的黑客。上高中，参加信息学竞赛，他发现，自己真的很菜；上大学，大一下的java课，他发现，自己真的很菜。他要想一个办法让自己变强，并且不变秃。写博客，可以记录自己技术进步的点滴，也能促使自己不断地学习新知识。或许现在这个博客的功能还不完善，页面也很简洁，">
+  <meta name="description" content="我是目录 git简介   基础知识：仓库   git的基本操作   标签   branch分支   远程仓库   多人远程合作   实用的cmd指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="极客之旅，由此启程">
-<meta property="og:url" content="http://yoursite.com/2020/06/28/%E6%9E%81%E5%AE%A2%E4%B9%8B%E6%97%85%EF%BC%8C%E7%94%B1%E6%AD%A4%E5%90%AF%E7%A8%8B/index.html">
+<meta property="og:title" content="git基础知识">
+<meta property="og:url" content="http://yoursite.com/2020/07/02/git%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="YWHF&#39;s blog">
-<meta property="og:description" content="序　　十年前，一个小男孩看了“黑客帝国”系列电影，在心中萌发了当黑客的念头。其实他当时想当的是电影里能够飙车，会功夫以一敌百的“黑客”，不是敲代码的黑客。上高中，参加信息学竞赛，他发现，自己真的很菜；上大学，大一下的java课，他发现，自己真的很菜。他要想一个办法让自己变强，并且不变秃。写博客，可以记录自己技术进步的点滴，也能促使自己不断地学习新知识。或许现在这个博客的功能还不完善，页面也很简洁，">
+<meta property="og:description" content="我是目录 git简介   基础知识：仓库   git的基本操作   标签   branch分支   远程仓库   多人远程合作   实用的cmd指令">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-28T00:04:12.423Z">
-<meta property="article:modified_time" content="2020-06-28T01:10:05.056Z">
+<meta property="article:published_time" content="2020-07-02T02:45:42.540Z">
+<meta property="article:modified_time" content="2020-07-02T05:37:02.423Z">
 <meta property="article:author" content="极客之旅">
 <meta name="twitter:card" content="summary">
   
@@ -140,42 +140,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-极客之旅，由此启程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git基础知识" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      极客之旅，由此启程
+      git基础知识
     </h1>
   
 
         
-        <a href="/2020/06/28/%E6%9E%81%E5%AE%A2%E4%B9%8B%E6%97%85%EF%BC%8C%E7%94%B1%E6%AD%A4%E5%90%AF%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-06-28T00:04:12.423Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
+        <a href="/2020/07/02/git%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2020-07-02T02:45:42.540Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>　　十年前，一个小男孩看了“黑客帝国”系列电影，在心中萌发了当黑客的念头。<del>其实他当时想当的是电影里能够飙车，会功夫以一敌百的“黑客”，不是敲代码的黑客。</del>上高中，参加信息学竞赛，他发现，自己真的很菜；上大学，大一下的java课，他发现，自己真的很菜。他要想一个办法让自己变强，<del>并且不变秃。</del>写博客，可以记录自己技术进步的点滴，也能促使自己不断地学习新知识。或许现在这个博客的功能还不完善，页面也很简洁，<del>（丑）</del>但已经具备了基本的博客功能。小男孩走了十年，这一次，算是真正开始了。<br>　　心之所向，素履以往。<br> <a id="more"></a>    </p>
-<h1 id="博客搭建的反思"><a href="#博客搭建的反思" class="headerlink" title="博客搭建的反思"></a>博客搭建的反思</h1><p>　　从开始学习博客搭建的知识，到完成此博客的搭建，用了三天时间。搭建过程中，深深感受到了自己的无知。在计算机领域，连入门都算不上。能搭好这个博客，也多亏了这个时代网络信息的发展，有很多热心的大佬分享教程，（有朝一日我也会写教程的，这是一个传承的过程，一定！），像我这样的小白才能按部就班地搭建自己的博客。作为博客，它似乎过于简洁了。但我在前端开发的知识储备几乎为0，短时间内也没有学习前端开发的意向，所以近期也不会再修改这个博客的代码了。列一些疑问吧，这些问题我只会按照教程做，但我完全没有理解其中的知识。有朝一日，，等我回头来看的时候，或许可以全部解答了呢。  </p>
-<ul>
-<li>git和github的仓库操作到底是什么？为什么我可以通过dos指令完成如此复杂的仓库操作？  </li>
-<li>ssh密钥是什么东西？初步类比理解：当手机登录微信时，会判断是不是绑定的手机号，如果不是则会有一个验证的过程；同理，当你的其他程序申请登录github时，它会根据此电脑的ssh密钥判断你是否可以直接登录。但其中的原理又是什么？  </li>
-<li>前端和后端的区别是什么？为什么说我的博客是一个纯前端的博客，完全没有后端？  </li>
-<li>.yml文件的语法是什么？虽然我已经修改了它的很多内容，但都是按照教程来的，完全没有理解它内部的逻辑。  </li>
-<li>为什么说我的博客是“托管”在github上的？我要如何脱离托管，自己开始运营维护博客？  </li>
-<li>为什么访问博客时，科学上网可以明显提高速度？  </li>
+        <h1 id="我是目录"><a href="#我是目录" class="headerlink" title="我是目录"></a>我是目录</h1><ul>
+<li>git简介  </li>
+<li>基础知识：仓库  </li>
+<li>git的基本操作  </li>
+<li>标签  </li>
+<li>branch分支  </li>
+<li>远程仓库  </li>
+<li>多人远程合作  </li>
+<li>实用的cmd指令  <a id="more"></a>  
+<h1 id="我是正文"><a href="#我是正文" class="headerlink" title="我是正文"></a>我是正文</h1><h3 id="1-git简介"><a href="#1-git简介" class="headerlink" title="1. git简介"></a>1. git简介</h3>之前想学习github的基本操作，后来发现要学会github就先得了解什么是git，于是又在B站上找教学视频。本笔记整理的资料来源请在B站搜索“表严肃讲git”。<br>所以git是一个什么东西呢？它是一个代码的版本控制工具。比如你玩单机游戏，可以设置很多的存档，如果当前的任务遇到了麻烦，可以载入之前的存档呀。或者有结局分支的游戏，你还可以每个分支结局存档，然后任意载入。类比到编程中，git允许你在写代码过程中存档，一旦想要后悔，可以非常放方便地载入之前的存档（或者平行的分支存档）。  <h3 id="2-repository仓库"><a href="#2-repository仓库" class="headerlink" title="2. repository仓库"></a>2. repository仓库</h3><h4 id="仓库是什么？"><a href="#仓库是什么？" class="headerlink" title="仓库是什么？"></a>仓库是什么？</h4>就是个文件夹，也称项目  <h4 id="如何创建呢？"><a href="#如何创建呢？" class="headerlink" title="如何创建呢？"></a>如何创建呢？</h4></li>
 </ul>
-<h1 id="下一阶段的目标"><a href="#下一阶段的目标" class="headerlink" title="下一阶段的目标"></a>下一阶段的目标</h1><ul>
-<li>暂时不会修改博客的代码了，日更也不是很现实，太费时间了（这三天里我就几乎没有做别的事情）。但如果有新知识的学习内容，或者有学习过程中的反思，还是更新一下博客。(每两天一次？)  </li>
-<li>这个暑假还是先把git和github的操作给熟悉了，github的资源太丰富了，一定要学会使用。  </li>
-<li>写饥荒的mod！学会从英文论坛中获取知识，不要畏惧Lua语言，学就是了。如果理解比较深入的话，可以出一个饥荒mod的编写教程，毕竟国内好像还没有成体系的教程呢。  </li>
-<li>申请下学期的java学助吧，既有工资，还能多和大佬们交流。</li>
-</ul>
+<p>1.本地创建<br>法一：创建文件夹。命令行进入。命令行输入”git init”<br>法二：命令行进入想创建处的上层。命令行输入“git init 文件名”<br>2.远程拉取<br>找到github上项目的clone地址并复制。命令行输入“git clone 粘贴”  </p>
+<h3 id="3-git的基本操作"><a href="#3-git的基本操作" class="headerlink" title="3. git的基本操作"></a>3. git的基本操作</h3><h4 id="如何存档"><a href="#如何存档" class="headerlink" title="如何存档"></a>如何存档</h4><p>1.修改了仓库的内容。<br>2.将修改加入暂存区<br>法一：“git add.”将所有文件加入<br>法二：”git add 文件名” 指定文件加入<br>3.查看暂存区的文件<br>git status  </p>
+<h4 id="如何查看所有存档：git-log"><a href="#如何查看所有存档：git-log" class="headerlink" title="如何查看所有存档：git log"></a>如何查看所有存档：git log</h4><p>git log -p:查看具体改了啥，上下键移动，q退出<br>git log  –oneline: 只查看所有存档名称和编号  </p>
+<h4 id="如何读档-git-checkout-xxxxx"><a href="#如何读档-git-checkout-xxxxx" class="headerlink" title="如何读档:git checkout xxxxx"></a>如何读档:git checkout xxxxx</h4><p>其中xxxxx为每个存档的编号，或者是标签名。<br>git checkout -可以撤销上一次读档  </p>
+<h3 id="4-标签（用于标注重要存档）"><a href="#4-标签（用于标注重要存档）" class="headerlink" title="4. 标签（用于标注重要存档）"></a>4. 标签（用于标注重要存档）</h3><h4 id="标签的添加："><a href="#标签的添加：" class="headerlink" title="标签的添加："></a>标签的添加：</h4><p>git tag -a 标签名 -m “备注” 存档编号  </p>
+<h4 id="标签的查看"><a href="#标签的查看" class="headerlink" title="标签的查看"></a>标签的查看</h4><p>git tag:显示所有标签<br>git show 标签名：显示该标签的详细信息  </p>
+<h3 id="5-分支branch-默认分支为master"><a href="#5-分支branch-默认分支为master" class="headerlink" title="5. 分支branch(默认分支为master)"></a>5. 分支branch(默认分支为master)</h3><h4 id="分支的创建和切换"><a href="#分支的创建和切换" class="headerlink" title="分支的创建和切换"></a>分支的创建和切换</h4><p>git branch “分支名”：在当前位置创建分支<br>git checkout 分支名：切换分支<br>git checkout -b 分支名：创建并切换分支<br>####分支的合并<br>git merge 分支名：将该分支合并到当前分支<br>####分支的查看<br>git log –all –graph:图示全部历史记录  </p>
+<h3 id="6-远程仓库"><a href="#6-远程仓库" class="headerlink" title="6. 远程仓库"></a>6. 远程仓库</h3><h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><ol>
+<li>github上先新建一个仓库，并拷贝地址  </li>
+<li>git remote add 远程仓库名（自己取）远程地址：添加远程仓库  <h4 id="远程仓库查看"><a href="#远程仓库查看" class="headerlink" title="远程仓库查看"></a>远程仓库查看</h4>git remote:列出所有远程仓库<br>git remote -v:远程仓库详情  <h4 id="上传代码"><a href="#上传代码" class="headerlink" title="上传代码"></a>上传代码</h4>git push -u 远程名 分支名：这里不太明白，教程中的分支都写得是默认分支master  <h4 id="拷贝仓库"><a href="#拷贝仓库" class="headerlink" title="拷贝仓库"></a>拷贝仓库</h4>git clone 仓库地址：这样这个库的远程仓库地址会自动设置为此地址，并且远程仓库名称为origin  <h3 id="7-多人远程合作"><a href="#7-多人远程合作" class="headerlink" title="7.多人远程合作"></a>7.多人远程合作</h3>这个部分涉及到代码的冲突和解决方法，等以后遇到再进行学习。<br>git pull:更新仓库  <h3 id="8-cmd指令"><a href="#8-cmd指令" class="headerlink" title="8.cmd指令"></a>8.cmd指令</h3>cls:清屏<br>dir/a:查看当前目录所有文件。  </li>
+</ol>
 
       
 
@@ -197,18 +203,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/02/git%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git基础知识
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/06/27/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AC%AC%E4%B8%89%E5%A4%A9/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">搭建博客第三天</div>
+    <a href="/2020/06/28/%E6%9E%81%E5%AE%A2%E4%B9%8B%E6%97%85%EF%BC%8C%E7%94%B1%E6%AD%A4%E5%90%AF%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">极客之旅，由此启程</div>
       <i class="icon-circle-right"></i>
     </a>
   
