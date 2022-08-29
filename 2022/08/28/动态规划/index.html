@@ -19,12 +19,12 @@
 <meta property="og:site_name" content="Maxwell">
 <meta property="og:description" content="基础算法——动态规划​		Those who can cannot remember the past are condemned to repeat it.  ——题记 1 对于动态规划的理解​		首先以一个最熟悉的场景“求解第N项的斐波拉契数列”入手，最直接的写法是递归，比如我们需要计算f(6)的值，如下图递归树所示。我们会发现很多值被重复计算了多次，比如f(3)。这些重复的计算会大大增加这种">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://maxwell142857.github.io/%5Cimages%5Cdp_intro.png">
+<meta property="og:image" content="http://maxwell142857.github.io/images/dp_intro.png">
 <meta property="article:published_time" content="2022-08-28T07:33:41.000Z">
-<meta property="article:modified_time" content="2022-08-28T09:20:13.512Z">
+<meta property="article:modified_time" content="2022-08-29T12:28:22.226Z">
 <meta property="article:author" content="Maxwell">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://maxwell142857.github.io/%5Cimages%5Cdp_intro.png">
+<meta name="twitter:image" content="http://maxwell142857.github.io/images/dp_intro.png">
 
   <meta name="keywords" content="">
   <meta name="format-detection" content="telephone=no,email=no">
@@ -133,7 +133,9 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B/" rel="tag">国际象棋<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+        
+          <a href="javascript:;" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme mdui-ripple" style="justify-content: center;">标签为空</a>
         
       </div>
     </div>
@@ -171,7 +173,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-17.png" style="max-height: 240px;">
+      <img src="/images/random/material-13.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">动态规划</div>
@@ -223,7 +225,7 @@
     <div class="mdui-card-content mdui-typo">
       <h1 id="基础算法——动态规划"><a href="#基础算法——动态规划" class="headerlink" title="基础算法——动态规划"></a>基础算法——动态规划</h1><p>​		Those who can cannot remember the past are condemned to repeat it.  ——题记</p>
 <h2 id="1-对于动态规划的理解"><a href="#1-对于动态规划的理解" class="headerlink" title="1 对于动态规划的理解"></a>1 对于动态规划的理解</h2><p>​		首先以一个最熟悉的场景“求解第N项的斐波拉契数列”入手，最直接的写法是递归，比如我们需要计算f(6)的值，如下图递归树所示。我们会发现很多值被重复计算了多次，比如f(3)。这些重复的计算会大大增加这种解法的耗时，那么如何优化呢？</p>
-<p><img src="/%5Cimages%5Cdp_intro.png" alt="dp_intro"></p>
+<p><img src="/images/dp_intro.png" alt="dp_intro"></p>
 <p>​		最直接的想法就是使用备忘录，每当我们算出一个值后，记录下来。当递归时，先去备忘录里看看这个值是否已经被算过了，如果是，就直接返回不用继续递归下去了，如此保证每个值只被计算了一次。</p>
 <p>​		不使用备忘录，也还可以采用递推的方法，这样也能确保每个值仅被计算了一次。这两种方法都能将复杂度从指数级别(可以近似认为是O(2^n),因为是一个n层二叉树，但每层不满；更精确的值是1.618n次方，具体计算涉及数学分析）降低到O(n)。</p>
 <p>​		那这道题和动态规划有什么关系呢？其实O(n)的解法，就是动态规划！动态规划有如下的两个特点：</p>
@@ -256,7 +258,13 @@
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-paths-ii/">题目</a>：同上，不过现在地图上有障碍物了。<br>思路：同上，遇到障碍物则置0 。<br>完成时间：2022.8.26</p>
 </blockquote>
-<h3 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h3>
+<h3 id="1-2-单序列动态规划"><a href="#1-2-单序列动态规划" class="headerlink" title="1.2 单序列动态规划"></a>1.2 单序列动态规划</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-increasing-subsequence/">题目</a>：最长递增子序列<br>思路：dp[i]描述的是以该位置结尾的最长递增子序列的长度。对于当前的dp[i],查看所有它之前的dp[j]，如果数值比当前位置小，说明可以转换，则在可以转换的dp[j]中找到最大的值即为所求。<br>动态转移方程：dp[i] &#x3D; max(dp[j])+1,其中0≤j&lt;i且num[j]&lt;num[i]<br>技巧：如果找不到状态转移方程，可以把搜索树画一下，可能就有灵感了<br>其他解法：使用动态规划的时间复杂度为n^2，而如果使用“贪心+二分搜索”，复杂度为n*lgn。似乎一些动态规划的题都可以用贪心且效率更高（但前提是能想到贪心怎么贪）。贪心稍后用一个专题来整理。<br>完成时间：2022.8.29</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/house-robber/">题目</a>：给定一个数组，从中选取任意个数使得合最大，但要求不能选取相邻的数<br>思路：很简单的dp啦，阶段划分挺明显的。dp[i]记录的是选择了这个数，到当前位置的最大值。既然选择了下标为i的值，i-1一定不选，则i-2和i-3必定是二选一的。<br>动态转移方程：dp[i] &#x3D; Math.max(dp[i-2],dp[i-3]) + nums[i];<br>技巧：如果找不到状态转移方程，可以把搜索树画一下，可能就有灵感了<br>其他解法：使用动态规划的时间复杂度为n^2，而如果使用“贪心+二分搜索”，复杂度为n*lgn。似乎一些动态规划的题都可以用贪心且效率更高（但前提是能想到贪心怎么贪）。贪心稍后用一个专题来整理。<br>完成时间：2022.8.29</p>
+</blockquote>
+
       
       <blockquote>
         
