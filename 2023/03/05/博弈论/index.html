@@ -8,26 +8,21 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>国际象棋新手篇 | Maxwell</title>
+  <title>博弈论 | Maxwell</title>
 
   <link rel="shortcut icon" href="/images/page.ico">
   
-  <meta name="description" content="前言​	在小学的时候上过校内的国际象棋班，对这个益智游戏还挺感兴趣的；但初中以后没有进一步学习，水平停留在自娱自乐阶段。大三上学期，“人工智能”课程需要我们写“黑白棋”的算法，并在平台上和其他的人工智能算法一决雌雄。在这个过程中，我乐此不疲地修改自己的评估函数，并且对此类竞技游戏有了新的认知：这种场上所有状态对弈双方都了解的游戏，比的无非就是搜索的深度和评估函数的有效性。因此想要提升棋艺，就需要从">
+  <meta name="description" content="前言现在是大四下学期，没有课程。偶然间在B站上看到耶鲁大学博弈论的公开课，看了第一课后感觉挺有意思的，于是决定这学期把这门课程上完。这学期我也在做家教，因此地铁上就是看这门课程的好时机，就是用手机做笔记比较麻烦，然后每节课看完后再把手机上的笔记整理到电脑。   我对于这门课程的期待主要是收获新的思维方式，博弈在生活中无处不在，希望通过这门课程能从新的角度看待生活。因此，对于课程一些公式，符号的内容">
 <meta property="og:type" content="article">
-<meta property="og:title" content="国际象棋新手篇">
-<meta property="og:url" content="http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/index.html">
+<meta property="og:title" content="博弈论">
+<meta property="og:url" content="http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Maxwell">
-<meta property="og:description" content="前言​	在小学的时候上过校内的国际象棋班，对这个益智游戏还挺感兴趣的；但初中以后没有进一步学习，水平停留在自娱自乐阶段。大三上学期，“人工智能”课程需要我们写“黑白棋”的算法，并在平台上和其他的人工智能算法一决雌雄。在这个过程中，我乐此不疲地修改自己的评估函数，并且对此类竞技游戏有了新的认知：这种场上所有状态对弈双方都了解的游戏，比的无非就是搜索的深度和评估函数的有效性。因此想要提升棋艺，就需要从">
+<meta property="og:description" content="前言现在是大四下学期，没有课程。偶然间在B站上看到耶鲁大学博弈论的公开课，看了第一课后感觉挺有意思的，于是决定这学期把这门课程上完。这学期我也在做家教，因此地铁上就是看这门课程的好时机，就是用手机做笔记比较麻烦，然后每节课看完后再把手机上的笔记整理到电脑。   我对于这门课程的期待主要是收获新的思维方式，博弈在生活中无处不在，希望通过这门课程能从新的角度看待生活。因此，对于课程一些公式，符号的内容">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://maxwell142857.github.io/images/chessboard.png">
-<meta property="og:image" content="http://maxwell142857.github.io/images/stalemate.png">
-<meta property="og:image" content="http://maxwell142857.github.io/images/draw.png">
-<meta property="og:image" content="http://maxwell142857.github.io/images/bypassing.png">
-<meta property="article:published_time" content="2022-07-17T06:15:37.000Z">
-<meta property="article:modified_time" content="2022-07-23T07:18:37.331Z">
+<meta property="article:published_time" content="2023-03-05T12:55:38.000Z">
+<meta property="article:modified_time" content="2023-03-05T15:19:04.106Z">
 <meta property="article:author" content="Maxwell">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://maxwell142857.github.io/images/chessboard.png">
 
   <meta name="keywords" content="">
   <meta name="format-detection" content="telephone=no,email=no">
@@ -35,7 +30,7 @@
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Maxwell">
-  <meta name="msapplication-starturl" content="http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/">
+  <meta name="msapplication-starturl" content="http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Maxwell">
@@ -43,7 +38,7 @@
   <link rel="apple-touch-icon" href="/images/page.ico">
 
   
-    <link rel="canonical" href="http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/">
+    <link rel="canonical" href="http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/">
   
 
   
@@ -176,11 +171,11 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-4.png" style="max-height: 240px;">
+      <img src="/images/random/material-7.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-title">国际象棋新手篇</div>
-          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2022-07-17 / <i class="iconfont">&#xe601;</i> Maxwell</div>
+          <div class="mdui-card-primary-title">博弈论</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2023-03-05 / <i class="iconfont">&#xe601;</i> Maxwell</div>
         </div>
       </div>
       <div class="mdui-card-menu">
@@ -192,7 +187,7 @@
             
             <li class="mdui-menu-item" disabled>
               
-                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/">
+                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/">
               
             </li>
           </ul>
@@ -201,82 +196,51 @@
           <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
           <ul class="mdui-menu" id="share_menu">
             <li class="mdui-menu-item">
-              <a href="https://service.weibo.com/share/share.php?appkey=&title=国际象棋新手篇&url=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/&pic=http://maxwell142857.github.io/images/page.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=博弈论&url=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/&pic=http://maxwell142857.github.io/images/page.ico&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://twitter.com/intent/tweet?text=国际象棋新手篇&url=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/&via=Maxwell" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+              <a href="https://twitter.com/intent/tweet?text=博弈论&url=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/&via=Maxwell" target="_blank" class="mdui-ripple">分享到 Twitter</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://plus.google.com/share?url=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+              <a href="https://plus.google.com/share?url=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/" target="_blank" class="mdui-ripple">分享到 Google+</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/&title=国际象棋新手篇" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/&title=博弈论" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://connect.qq.com/widget/shareqq/index.html?site=Maxwell&title=国际象棋新手篇&pics=http://maxwell142857.github.io/images/page.ico&url=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=Maxwell&title=博弈论&pics=http://maxwell142857.github.io/images/page.ico&url=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/" target="_blank" class="mdui-ripple">分享到 QQ</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://telegram.me/share/url?url=http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/&text=国际象棋新手篇" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+              <a href="https://telegram.me/share/url?url=http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/&text=博弈论" target="_blank" class="mdui-ripple">分享到 Telegram</a>
             </li>
           </ul>
         
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>​	在小学的时候上过校内的国际象棋班，对这个益智游戏还挺感兴趣的；但初中以后没有进一步学习，水平停留在自娱自乐阶段。大三上学期，“人工智能”课程需要我们写“黑白棋”的算法，并在平台上和其他的人工智能算法一决雌雄。在这个过程中，我乐此不疲地修改自己的评估函数，并且对此类竞技游戏有了新的认知：这种场上所有状态对弈双方都了解的游戏，比的无非就是<strong>搜索的深度</strong>和<strong>评估函数的有效性</strong>。因此想要提升棋艺，就需要从这两个方面提升。碰巧在大三下的时候了解到了这个全球最大的<a target="_blank" rel="noopener" href="https://www.chess.com/home">国际象棋网站</a> ，并且也有详细的教程，就借此暑假的机会好好学习一下吧。  </p>
-<h3 id="棋盘摆放"><a href="#棋盘摆放" class="headerlink" title="棋盘摆放"></a>棋盘摆放</h3><ul>
-<li><p>右下角为白格</p>
-</li>
-<li><p>黑后占黑格，白后占白格</p>
-</li>
-<li><p>其他棋子摆放略</p>
-</li>
-</ul>
-<h3 id="记谱法"><a href="#记谱法" class="headerlink" title="记谱法"></a>记谱法</h3><img src=" /images/chessboard.png " width="50%"> 
+      <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>现在是大四下学期，没有课程。偶然间在B站上看到耶鲁大学博弈论的公开课，看了第一课后感觉挺有意思的，于是决定这学期把这门课程上完。这学期我也在做家教，因此地铁上就是看这门课程的好时机，就是用手机做笔记比较麻烦，然后每节课看完后再把手机上的笔记整理到电脑。  </p>
+<p>我对于这门课程的期待主要是收获新的思维方式，博弈在生活中无处不在，希望通过这门课程能从新的角度看待生活。因此，对于课程一些公式，符号的内容，我仅仅用白话来做笔记。（其实是我太懒了，符号比较难打，我又不想去看教材直接截图）  </p>
+<p>附B站视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kt411h7Ep/">链接</a>，这个视频应该是2004年的上古视频啦。</p>
+<h2 id="Lesson-1：导论"><a href="#Lesson-1：导论" class="headerlink" title="Lesson 1：导论"></a>Lesson 1：导论</h2><h3 id="1-1-博弈案例"><a href="#1-1-博弈案例" class="headerlink" title="1.1 博弈案例"></a>1.1 博弈案例</h3><p><strong>1.1.1课程引入游戏：</strong>两个人，不交流情况下选择α或β，根据如下的表格确定两人的收益：<br>同时α则成绩都b-，同时β则成绩都b+。一方α一方β，则选α的人a，选β的人c<br><strong>启发：</strong>为何交流也无效？因为口头承诺没有强制力  </p>
+<p><strong>1.1.2现实例子：</strong>囚徒困境。两个犯人分别审问，如果都否认罪行，则证据不足只判一年；都坦白则两年；一方否认一方坦白，坦白的无罪释放，嘴硬的五年。<br><strong>启发：</strong>那为何在这里的合约，或许有强制性？因为被背叛的人可能会报复<br><strong>引申：</strong>黑社会势力的壮大，可能是法律强制力的补充。因为它维系所有合同，不管合法或非法。</p>
+<p><strong>1.1.3现实例子：</strong>寝室卫生打扫。比如两人寝室，两人的选择可以是打扫或不打扫。收益最好的情况是室友打扫我不打扫，次一等的情况是一起打扫，再次一等的情况是都不打扫，最次的情况是我打扫室友不打扫。所以优势策略是不打扫。<br><strong>启发：</strong>为何没有打扫公约，寝室相处依然很愉快？因为这个博弈不是单次博弈，它会一直重复</p>
+<p><strong>1.1.4现实例子：</strong>企业价格战。最好的情况是我降价你不降价，这样就可以削弱竞争对手；次一等情况是都不降价；再次一等情况是都降价，最次的情况是对手降价而我不降价。<br><strong>启发：</strong>企业为何不串通好，比如签署合同，大家都不降价？因为这个合同是违法的，不受法律保护。  </p>
+<h3 id="1-2-知识点"><a href="#1-2-知识点" class="headerlink" title="1.2 知识点"></a>1.2 知识点</h3><p><strong>严格优势策略：</strong>my strategy Alpha strictly dominates my strategy Beta if my payoff from Alpha is strictly greater than that from Beta regardless of what others do</p>
+<h3 id="1-3-本课程最需要记住的五个点"><a href="#1-3-本课程最需要记住的五个点" class="headerlink" title="1.3 本课程最需要记住的五个点"></a>1.3 本课程最需要记住的五个点</h3><p>1Do not play a strictly dominated strategy<br>2 Dominant rational choice can lead to outcomes that suck<br>3 you cannot get what you want, til you know what you want（得明确自己的收益）<br>4 put yourself in someone else’s shoes and try to figure out what they will do<br>5 参与博弈的人都很明智（原句：Yale students are evil，笑）  </p>
+<h2 id="Lesson-2：学会换位思考"><a href="#Lesson-2：学会换位思考" class="headerlink" title="Lesson 2：学会换位思考"></a>Lesson 2：学会换位思考</h2><h3 id="2-1-博弈案例"><a href="#2-1-博弈案例" class="headerlink" title="2.1 博弈案例"></a>2.1 博弈案例</h3><p><strong>2.1.1历史例子：</strong>敌国进攻，两个营兵力，两条路，平路和山路。山路会损耗一个营，平路无消耗。我方选择一条路设防，成功阻击可削弱对方一个营。<br><strong>分析：</strong>对手会选择进攻平路，这是weakly dominate的策略。假设我方防守山路，进攻方血赚，如果我方防守平路，那这个选择其实也不亏。所以对方一定会进攻平路。而我方换位思考后，也应该防守平路。</p>
+<p><strong>2.1.2 全班的游戏</strong>（胜者有5美元，笑）：全班同学，每人选取1-100一个整数，最接近平均数的2&#x2F;3的同学获胜。<br><strong>分析：</strong>如果全班同学都选100，则获胜的数应该是67，这是绝对不可能的，所以大于66的数都应该被排除查（这些都是劣势策略），问题转化成从1-66选数字。以此类推，问题转化为从1-44选择数字。最后，只能选1。<br><strong>引申：</strong>博弈的千层套路~在这个博弈中，第一层的理性是：自己不要选67以上的数字；第二层：如果要剔除66-44，就需要我知道我的博弈对手们都是理性的（因为剔除66-44是基于大家都需要明白67-100被剔除，没人选这个区间的数，所以博弈对手们都是理性的）（所以选了66-44区间的，他们本身是理性的，但他们认为他们的对手是憨的）；第三层：剔除44-30，则需要“你知道我知道你是理性的”；以此类推，最后得到1的条件是：你知道我知道你知道我知道…………是理性的。这么长一串“知道”，引出“共同知识”这个概念。</p>
+<h3 id="2-2-知识点"><a href="#2-2-知识点" class="headerlink" title="2.2 知识点"></a>2.2 知识点</h3><p><strong>博弈的组成：</strong>players, strategies,payoff<br><strong>弱优于（weakly dominate）：</strong>将“严格优于”中的大于号改为大于等于（在某些情况下，这是几个优解其中之一），并且不能在所有情况都是等于<br><strong>共同知识（common knowledge）：</strong>我知你知我知你知……<br>**相互知识（mutual knowledge）:**两个助教被教授戴上帽子，他们可以看到对方的帽子都是粉色的，但不知道自己的帽子是什么颜色。“房间中至少有一个粉帽子”就不是共同知识，而是相互知识。因为A虽然知道这个命题是正确的，但A不知道B知道这个命题是正确的。</p>
 
-<ul>
-<li>在国际象棋中，每列叫做file(由a到h表示)，每行叫做rank（由1到8表示）</li>
-<li>每个左边点先字母后数字，比如a1</li>
-<li>每类棋子由一个大写字母表示：King &#x3D; K. Queen &#x3D; Q. Rook（车） &#x3D; R. Bishop （象）&#x3D; B. Knight（马） &#x3D; N Pawn （兵）无字母表示（可怜的无名小卒）</li>
-<li>如何描述步骤：棋子名字+目的地坐标，比如王移动到a1,则是Ka1；小兵移动到a4，则直接是a4</li>
-<li>如果上述规则有冲突，比如两个马都可以移动到e4，则需要加起点，比如移动的是位于g列的马，则是Nge4</li>
-<li>如果此步check（将军），则在最后加上+，比如马移动到e4并且将军，则表示为Ne4+</li>
-<li>如果此步checkmate(将死)，则在最后加上#</li>
-<li>王车易位，长王车表示为0-0-0,短王车表示为0-0</li>
-<li>每一行代表双方的走法，比如1.f3 e5，代表开局第一步，白方移动兵到f3，黑方移动兵到e5</li>
-</ul>
-<h3 id="将军和将死"><a href="#将军和将死" class="headerlink" title="将军和将死"></a>将军和将死</h3><ul>
-<li>check（将军）指攻击到了对手的王，对方必须做出回应</li>
-<li>回应有三种：跑，用其他棋子阻挡将军，或者吃掉对方将军的棋子</li>
-<li>如果上述三种回应都无法执行，则为checkmate(将死)，游戏结束，和对手握手并说good game</li>
-</ul>
-<h3 id="和棋"><a href="#和棋" class="headerlink" title="和棋"></a>和棋</h3><p>和棋实在是太精妙了，当处于劣势的时候，可以思考如何去构造和棋。如下是和棋的几种情况：</p>
-<ul>
-<li>Stalemate：某方达到回合，但是没有可以执行的行动了，并且不处于将军状态。如下图，黑棋走<img src=" /images/stalemate.png " width="50%"> </li>
-<li>双方同意和棋</li>
-<li>相同情况重复3次，如下图白棋走，白棋处于明显劣势，考虑逼和。Qg6+,黑方只能Kh8。Qh6+,黑方只能Kg8。如上反复三次，成功和棋<img src=" /images/draw.png " width="50%"> </li>
-<li>50步内双方没吃子</li>
-</ul>
-<h3 id="王车易位"><a href="#王车易位" class="headerlink" title="王车易位"></a>王车易位</h3><p>以下情况不可进行王车易位：</p>
-<ul>
-<li>参与的两个棋子之前没有行动过</li>
-<li>王和车中间不能有棋子</li>
-<li>王不能被将军（起点，经过的路线，终点）</li>
-</ul>
-<h3 id="吃过路兵"><a href="#吃过路兵" class="headerlink" title="吃过路兵"></a>吃过路兵</h3><p>被称为En Passant，法语，意为in passing。这个规则是当“兵第一步可以走两格”被提出时同时被提出的。当兵第一步可以走两格后，它可能可以直接和对方的兵擦肩而过，但对方却没有机会吃它（所以视频中说这似乎不公平）。于是在上述情境下，“En Passant”允许对方吃掉它（仅此一次机会）。具体如下图所示。</p>
-<img src=" /images/bypassing.png " width="50%"> 
       
       <blockquote>
         
-        <strong>本文链接：</strong><br><a href="http://maxwell142857.github.io/2022/07/17/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%96%B0%E6%89%8B%E7%AF%87/">http://maxwell142857.github.io/2022/07/17/国际象棋新手篇/</a>
+        <strong>本文链接：</strong><br><a href="http://maxwell142857.github.io/2023/03/05/%E5%8D%9A%E5%BC%88%E8%AE%BA/">http://maxwell142857.github.io/2023/03/05/博弈论/</a>
       </blockquote>
     </div>
     <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B/">国际象棋</a>
       
       
     </footer>
@@ -291,15 +255,10 @@
 
   <nav id="paginator">
     
-      <a rel="prev" class="extend prev" href="/2022/07/23/%E7%86%AC%E5%A4%9C%E5%8A%A8%E6%9C%BA%E6%8E%A2%E7%A9%B6/">
-        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
-        <span class="mdui-p-x-3" mdui-tooltip="{content: '熬夜动机探究'}">上一篇</span>
-      </a>
-    
     <div class="spacer"></div>
     
-      <a rel="next" class="extend next" href="/2022/07/16/love-death-robots%E7%AC%AC%E4%BA%8C%E5%AD%A3/">
-        <span class="mdui-p-x-3" mdui-tooltip="{content: 'love-death-robots第二季'}">下一篇</span>
+      <a rel="next" class="extend next" href="/2023/02/27/%E5%A1%9E%E5%B0%94%E8%BE%BE%E4%BC%A0%E8%AF%B4%E8%8D%92%E9%87%8E%E4%B9%8B%E6%81%AF/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '塞尔达传说荒野之息'}">下一篇</span>
         <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
       </a>
     
