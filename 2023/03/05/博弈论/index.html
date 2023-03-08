@@ -19,10 +19,12 @@
 <meta property="og:site_name" content="Maxwell">
 <meta property="og:description" content="前言现在是大四下学期，没有课程。偶然间在B站上看到耶鲁大学博弈论的公开课，看了第一课后感觉挺有意思的，于是决定这学期把这门课程上完。这学期我也在做家教，因此地铁上就是看这门课程的好时机，就是用手机做笔记比较麻烦，然后每节课看完后再把手机上的笔记整理到电脑。   我对于这门课程的期待主要是收获新的思维方式，博弈在生活中无处不在，希望通过这门课程能从新的角度看待生活。因此，对于课程一些公式，符号的内容">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson3.jpg">
 <meta property="article:published_time" content="2023-03-05T12:55:38.000Z">
-<meta property="article:modified_time" content="2023-03-05T15:19:04.106Z">
+<meta property="article:modified_time" content="2023-03-08T03:15:33.701Z">
 <meta property="article:author" content="Maxwell">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://maxwell142857.github.io/images/game_theory_lesson3.jpg">
 
   <meta name="keywords" content="">
   <meta name="format-detection" content="telephone=no,email=no">
@@ -171,7 +173,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-7.png" style="max-height: 240px;">
+      <img src="/images/random/material-14.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">博弈论</div>
@@ -233,6 +235,52 @@
 <h2 id="Lesson-2：学会换位思考"><a href="#Lesson-2：学会换位思考" class="headerlink" title="Lesson 2：学会换位思考"></a>Lesson 2：学会换位思考</h2><h3 id="2-1-博弈案例"><a href="#2-1-博弈案例" class="headerlink" title="2.1 博弈案例"></a>2.1 博弈案例</h3><p><strong>2.1.1历史例子：</strong>敌国进攻，两个营兵力，两条路，平路和山路。山路会损耗一个营，平路无消耗。我方选择一条路设防，成功阻击可削弱对方一个营。<br><strong>分析：</strong>对手会选择进攻平路，这是weakly dominate的策略。假设我方防守山路，进攻方血赚，如果我方防守平路，那这个选择其实也不亏。所以对方一定会进攻平路。而我方换位思考后，也应该防守平路。</p>
 <p><strong>2.1.2 全班的游戏</strong>（胜者有5美元，笑）：全班同学，每人选取1-100一个整数，最接近平均数的2&#x2F;3的同学获胜。<br><strong>分析：</strong>如果全班同学都选100，则获胜的数应该是67，这是绝对不可能的，所以大于66的数都应该被排除查（这些都是劣势策略），问题转化成从1-66选数字。以此类推，问题转化为从1-44选择数字。最后，只能选1。<br><strong>引申：</strong>博弈的千层套路~在这个博弈中，第一层的理性是：自己不要选67以上的数字；第二层：如果要剔除66-44，就需要我知道我的博弈对手们都是理性的（因为剔除66-44是基于大家都需要明白67-100被剔除，没人选这个区间的数，所以博弈对手们都是理性的）（所以选了66-44区间的，他们本身是理性的，但他们认为他们的对手是憨的）；第三层：剔除44-30，则需要“你知道我知道你是理性的”；以此类推，最后得到1的条件是：你知道我知道你知道我知道…………是理性的。这么长一串“知道”，引出“共同知识”这个概念。</p>
 <h3 id="2-2-知识点"><a href="#2-2-知识点" class="headerlink" title="2.2 知识点"></a>2.2 知识点</h3><p><strong>博弈的组成：</strong>players, strategies,payoff<br><strong>弱优于（weakly dominate）：</strong>将“严格优于”中的大于号改为大于等于（在某些情况下，这是几个优解其中之一），并且不能在所有情况都是等于<br><strong>共同知识（common knowledge）：</strong>我知你知我知你知……<br>**相互知识（mutual knowledge）:**两个助教被教授戴上帽子，他们可以看到对方的帽子都是粉色的，但不知道自己的帽子是什么颜色。“房间中至少有一个粉帽子”就不是共同知识，而是相互知识。因为A虽然知道这个命题是正确的，但A不知道B知道这个命题是正确的。</p>
+<h1 id="Lesson-3-迭代剔除和中位选民定理"><a href="#Lesson-3-迭代剔除和中位选民定理" class="headerlink" title="Lesson 3: 迭代剔除和中位选民定理"></a>Lesson 3: 迭代剔除和中位选民定理</h1><h2 id="3-1-博弈案例"><a href="#3-1-博弈案例" class="headerlink" title="3.1 博弈案例"></a>3.1 博弈案例</h2><p><strong>3.1.1政治立场选择模型</strong>：两个候选人，需要选择自己的政治立场。共有10个立场，从1-10，1代表极端左翼，10代表极端右翼。每个立场10%的选票，人们会投票给立场最近的候选人。如果两个候选人距离相近则选票平分。<br><strong>分析</strong>：经过计算，策略2会严格优于策略1。同理，策略9严格优于策略10。如果剔除了1，10这两个劣势策略后，则3严格优于2，8严格优于9。所以也每人选2和9了。以此类推，最后只剩下5和6  。<br><strong>引申</strong>：中间选民定理（Median Voter Theorem）：处于中间的选民不仅左右了选举的结果，还决定了哪些政策可以实施。（美国大选中，选举人的立场都会向中间靠拢）  </p>
+<p><strong>此模型的不足</strong>:</p>
+<ul>
+<li><p>选民的立场不是均匀分布的：如果是正态分布，那中间的人数更多，其实不影响这个模型的结果。</p>
+</li>
+<li><p>多个候选人。</p>
+</li>
+<li><p>候选人说一套做一套：比如在选举时声称自己是保守派，但实际上是激进派。选民可以通过过去的记录了解到，可能不会信候选人的说辞。</p>
+</li>
+<li><p>选民会从多维度分析：比如不仅注意候选人的政治主张，而且注意他们的长相（笑）</p>
+</li>
+<li><p>存在预选，初选。</p>
+</li>
+</ul>
+<p><strong>3.1.2  Best response例子</strong>:一个人选上中下,一个人选左右，收益如下表所示(第一个数字代表“上中下人”的收益)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>left</th>
+<th>right</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>up</td>
+<td>5,1</td>
+<td>0,2</td>
+</tr>
+<tr>
+<td>middle</td>
+<td>1,3</td>
+<td>4,1</td>
+</tr>
+<tr>
+<td>down</td>
+<td>4,2</td>
+<td>2,3</td>
+</tr>
+</tbody></table>
+<p><strong>分析</strong>:我是“上中下人”，如果对手选左，则上为best response;如果对手选右，则中为best response；如果对手等可能选择左或右，则选下的收益期望最高。 本例子不存在dominate strategy。  </p>
+<p>我们采取新的分析方式：下图中x轴为p(r)，代表对手选右的概率，y轴则代表我的收益。黑线代表我选up,蓝线代表middle，红线代表down。  </p>
+<p>从这张图可以清晰看出，如果我认为对手选left的概率很高，则我应该选up(对应黑线)；如果对手选择左或者右的概率大致相当，则我应该选down(对应红线)；如果对手有较高概率选right，则我应该选middle(对应蓝线)</p>
+<img src=" /images/game_theory_lesson3.jpg " width="50%"> 
+
+
+<h2 id="3-2-知识点"><a href="#3-2-知识点" class="headerlink" title="3.2 知识点"></a>3.2 知识点</h2><p><strong>迭代剔除劣势策略</strong>：不断删除劣势的策略。这个过程需要换位思考。（如上节课1-100选数字的游戏）</p>
 
       
       <blockquote>
