@@ -20,8 +20,10 @@
 <meta property="og:description" content="前言现在是大四下学期，没有课程。偶然间在B站上看到耶鲁大学博弈论的公开课，看了第一课后感觉挺有意思的，于是决定这学期把这门课程上完。这学期我也在做家教，因此地铁上就是看这门课程的好时机，就是用手机做笔记比较麻烦，然后每节课看完后再把手机上的笔记整理到电脑。   我对于这门课程的期待主要是收获新的思维方式，博弈在生活中无处不在，希望通过这门课程能从新的角度看待生活。因此，对于课程一些公式，符号的内容">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson3.jpg">
+<meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson4_soccer.jpg">
+<meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson4_balance.jpg">
 <meta property="article:published_time" content="2023-03-05T12:55:38.000Z">
-<meta property="article:modified_time" content="2023-03-08T03:15:33.701Z">
+<meta property="article:modified_time" content="2023-03-10T14:40:56.298Z">
 <meta property="article:author" content="Maxwell">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://maxwell142857.github.io/images/game_theory_lesson3.jpg">
@@ -173,7 +175,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-14.png" style="max-height: 240px;">
+      <img src="/images/random/material-12.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">博弈论</div>
@@ -281,6 +283,42 @@
 
 
 <h2 id="3-2-知识点"><a href="#3-2-知识点" class="headerlink" title="3.2 知识点"></a>3.2 知识点</h2><p><strong>迭代剔除劣势策略</strong>：不断删除劣势的策略。这个过程需要换位思考。（如上节课1-100选数字的游戏）</p>
+<h1 id="Lesson-4-足球比赛与商业合作之对策"><a href="#Lesson-4-足球比赛与商业合作之对策" class="headerlink" title="Lesson 4: 足球比赛与商业合作之对策"></a>Lesson 4: 足球比赛与商业合作之对策</h1><h2 id="4-1博弈案例"><a href="#4-1博弈案例" class="headerlink" title="4.1博弈案例"></a>4.1博弈案例</h2><p><strong>4.1.1足球罚球</strong>：先不考虑门将扑中的情况，门将有扑向左边和扑向右边两个选项，罚球者有左中右三个选项。收益如下（代表命中率）：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>L</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>L</td>
+<td>40%</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>M</td>
+<td>60%</td>
+<td>60%</td>
+</tr>
+<tr>
+<td>R</td>
+<td>90%</td>
+<td>40%</td>
+</tr>
+</tbody></table>
+<p><strong>分析：</strong>没有优势策略，按照上节课思路分析，如下作图。x轴p(r)代表我认为守门员扑右的概率。y轴代表进球的概率。黑线代表射左，红线代表射右，蓝线代表射中。</p>
+<img src=" /images/game_theory_lesson4_soccer.jpg " width="50%"> 
+**发现：**无论认为门将有多大概率扑救右边，都不应该射中路。换句话说，任何情况下，射中路都不是一个最好的选择。
+**结论：** do not choose a strategy  that is never a best response to anything you could believe
+
+<p><strong>4.1.2商业合作案例</strong>：两个商业合伙人，利润平分，每人的付出是a和b(取值范围为0-4)，总利润计算为4（a+b+tab），其中t为合作参数（代表两人的合作程度，取值范围0-1&#x2F;4）。每个人最终利润2(a+b+tab)-a^2。问a应该取多少。<br><strong>分析：</strong>以我为A为例，将b视为常数，则收益函数为关于a的开口朝下的二次函数，根据求导知识可知收益最大的取值为a &#x3D; 1+ tb。则以横轴为b的取值，纵轴为a的取值作图，可得图中蓝色的线。此代表当b取某值时，a应当选择的best response。同理可画出红色的线，代表对手的best response。根据定理“do not choose a strategy  that is never a best response to anything you could believe”,a的取值范围只有[1,1+4t]，即为图中蓝色阴影；同理，b的取值也为[1,1+4t]，即为图中红色阴影部分。所以两者的交集就是一个两种颜色的正方形，其余的点在这个博弈中是不会被选择的，因此可以直接删除。  </p>
+<p>再次研究这个取出的小正方形，会发现它的形状和原图一致，使用相同的方法，得到更小的正方形。逐渐迭代删除非best response，最后整张图会收敛到一个点：原图中两条直线的交点。</p>
+<img src=" /images/game_theory_lesson4_balance.jpg " width="50%"> 
+
+<p><strong>启发：</strong>这个点，就是大名鼎鼎的纳什均衡点。</p>
+<h2 id="4-2-知识点："><a href="#4-2-知识点：" class="headerlink" title="4.2 知识点："></a>4.2 知识点：</h2><p>best response：当对手选择某策略时，我能最大化我的利益的策略被称为best response。</p>
 
       
       <blockquote>
