@@ -22,8 +22,9 @@
 <meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson3.jpg">
 <meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson4_soccer.jpg">
 <meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson4_balance.jpg">
+<meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson5.jpg">
 <meta property="article:published_time" content="2023-03-05T12:55:38.000Z">
-<meta property="article:modified_time" content="2023-03-10T14:40:56.298Z">
+<meta property="article:modified_time" content="2023-03-13T14:49:41.618Z">
 <meta property="article:author" content="Maxwell">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://maxwell142857.github.io/images/game_theory_lesson3.jpg">
@@ -175,7 +176,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-12.png" style="max-height: 240px;">
+      <img src="/images/random/material-10.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">博弈论</div>
@@ -236,7 +237,7 @@
 <h3 id="1-3-本课程最需要记住的五个点"><a href="#1-3-本课程最需要记住的五个点" class="headerlink" title="1.3 本课程最需要记住的五个点"></a>1.3 本课程最需要记住的五个点</h3><p>1Do not play a strictly dominated strategy<br>2 Dominant rational choice can lead to outcomes that suck<br>3 you cannot get what you want, til you know what you want（得明确自己的收益）<br>4 put yourself in someone else’s shoes and try to figure out what they will do<br>5 参与博弈的人都很明智（原句：Yale students are evil，笑）  </p>
 <h2 id="Lesson-2：学会换位思考"><a href="#Lesson-2：学会换位思考" class="headerlink" title="Lesson 2：学会换位思考"></a>Lesson 2：学会换位思考</h2><h3 id="2-1-博弈案例"><a href="#2-1-博弈案例" class="headerlink" title="2.1 博弈案例"></a>2.1 博弈案例</h3><p><strong>2.1.1历史例子：</strong>敌国进攻，两个营兵力，两条路，平路和山路。山路会损耗一个营，平路无消耗。我方选择一条路设防，成功阻击可削弱对方一个营。<br><strong>分析：</strong>对手会选择进攻平路，这是weakly dominate的策略。假设我方防守山路，进攻方血赚，如果我方防守平路，那这个选择其实也不亏。所以对方一定会进攻平路。而我方换位思考后，也应该防守平路。</p>
 <p><strong>2.1.2 全班的游戏</strong>（胜者有5美元，笑）：全班同学，每人选取1-100一个整数，最接近平均数的2&#x2F;3的同学获胜。<br><strong>分析：</strong>如果全班同学都选100，则获胜的数应该是67，这是绝对不可能的，所以大于66的数都应该被排除查（这些都是劣势策略），问题转化成从1-66选数字。以此类推，问题转化为从1-44选择数字。最后，只能选1。<br><strong>引申：</strong>博弈的千层套路~在这个博弈中，第一层的理性是：自己不要选67以上的数字；第二层：如果要剔除66-44，就需要我知道我的博弈对手们都是理性的（因为剔除66-44是基于大家都需要明白67-100被剔除，没人选这个区间的数，所以博弈对手们都是理性的）（所以选了66-44区间的，他们本身是理性的，但他们认为他们的对手是憨的）；第三层：剔除44-30，则需要“你知道我知道你是理性的”；以此类推，最后得到1的条件是：你知道我知道你知道我知道…………是理性的。这么长一串“知道”，引出“共同知识”这个概念。</p>
-<h3 id="2-2-知识点"><a href="#2-2-知识点" class="headerlink" title="2.2 知识点"></a>2.2 知识点</h3><p><strong>博弈的组成：</strong>players, strategies,payoff<br><strong>弱优于（weakly dominate）：</strong>将“严格优于”中的大于号改为大于等于（在某些情况下，这是几个优解其中之一），并且不能在所有情况都是等于<br><strong>共同知识（common knowledge）：</strong>我知你知我知你知……<br>**相互知识（mutual knowledge）:**两个助教被教授戴上帽子，他们可以看到对方的帽子都是粉色的，但不知道自己的帽子是什么颜色。“房间中至少有一个粉帽子”就不是共同知识，而是相互知识。因为A虽然知道这个命题是正确的，但A不知道B知道这个命题是正确的。</p>
+<h3 id="2-2-知识点"><a href="#2-2-知识点" class="headerlink" title="2.2 知识点"></a>2.2 知识点</h3><p><strong>博弈的组成：</strong>players, strategies,payoff<br><strong>弱优于（weakly dominate）：</strong>将“严格优于”中的大于号改为大于等于（在某些情况下，这是几个优解其中之一），并且不能在所有情况都是等于<br><strong>共同知识（common knowledge）：</strong>我知你知我知你知……<br><strong>相互知识（mutual knowledge）:</strong> 两个助教被教授戴上帽子，他们可以看到对方的帽子都是粉色的，但不知道自己的帽子是什么颜色。“房间中至少有一个粉帽子”就不是共同知识，而是相互知识。因为A虽然知道这个命题是正确的，但A不知道B知道这个命题是正确的。</p>
 <h1 id="Lesson-3-迭代剔除和中位选民定理"><a href="#Lesson-3-迭代剔除和中位选民定理" class="headerlink" title="Lesson 3: 迭代剔除和中位选民定理"></a>Lesson 3: 迭代剔除和中位选民定理</h1><h2 id="3-1-博弈案例"><a href="#3-1-博弈案例" class="headerlink" title="3.1 博弈案例"></a>3.1 博弈案例</h2><p><strong>3.1.1政治立场选择模型</strong>：两个候选人，需要选择自己的政治立场。共有10个立场，从1-10，1代表极端左翼，10代表极端右翼。每个立场10%的选票，人们会投票给立场最近的候选人。如果两个候选人距离相近则选票平分。<br><strong>分析</strong>：经过计算，策略2会严格优于策略1。同理，策略9严格优于策略10。如果剔除了1，10这两个劣势策略后，则3严格优于2，8严格优于9。所以也每人选2和9了。以此类推，最后只剩下5和6  。<br><strong>引申</strong>：中间选民定理（Median Voter Theorem）：处于中间的选民不仅左右了选举的结果，还决定了哪些政策可以实施。（美国大选中，选举人的立场都会向中间靠拢）  </p>
 <p><strong>此模型的不足</strong>:</p>
 <ul>
@@ -309,16 +310,56 @@
 </tr>
 </tbody></table>
 <p><strong>分析：</strong>没有优势策略，按照上节课思路分析，如下作图。x轴p(r)代表我认为守门员扑右的概率。y轴代表进球的概率。黑线代表射左，红线代表射右，蓝线代表射中。</p>
-<img src=" /images/game_theory_lesson4_soccer.jpg " width="50%"> 
-**发现：**无论认为门将有多大概率扑救右边，都不应该射中路。换句话说，任何情况下，射中路都不是一个最好的选择。
-**结论：** do not choose a strategy  that is never a best response to anything you could believe
+<img src=" /images/game_theory_lesson4_soccer.jpg " width="50%">  
 
+<p><strong>发现：</strong>无论认为门将有多大概率扑救右边，都不应该射中路。换句话说，任何情况下，射中路都不是一个最好的选择。  </p>
+<p><strong>结论：</strong> do not choose a strategy  that is never a best response to anything you could believe</p>
 <p><strong>4.1.2商业合作案例</strong>：两个商业合伙人，利润平分，每人的付出是a和b(取值范围为0-4)，总利润计算为4（a+b+tab），其中t为合作参数（代表两人的合作程度，取值范围0-1&#x2F;4）。每个人最终利润2(a+b+tab)-a^2。问a应该取多少。<br><strong>分析：</strong>以我为A为例，将b视为常数，则收益函数为关于a的开口朝下的二次函数，根据求导知识可知收益最大的取值为a &#x3D; 1+ tb。则以横轴为b的取值，纵轴为a的取值作图，可得图中蓝色的线。此代表当b取某值时，a应当选择的best response。同理可画出红色的线，代表对手的best response。根据定理“do not choose a strategy  that is never a best response to anything you could believe”,a的取值范围只有[1,1+4t]，即为图中蓝色阴影；同理，b的取值也为[1,1+4t]，即为图中红色阴影部分。所以两者的交集就是一个两种颜色的正方形，其余的点在这个博弈中是不会被选择的，因此可以直接删除。  </p>
 <p>再次研究这个取出的小正方形，会发现它的形状和原图一致，使用相同的方法，得到更小的正方形。逐渐迭代删除非best response，最后整张图会收敛到一个点：原图中两条直线的交点。</p>
 <img src=" /images/game_theory_lesson4_balance.jpg " width="50%"> 
 
 <p><strong>启发：</strong>这个点，就是大名鼎鼎的纳什均衡点。</p>
-<h2 id="4-2-知识点："><a href="#4-2-知识点：" class="headerlink" title="4.2 知识点："></a>4.2 知识点：</h2><p>best response：当对手选择某策略时，我能最大化我的利益的策略被称为best response。</p>
+<h2 id="4-2-知识点："><a href="#4-2-知识点：" class="headerlink" title="4.2 知识点："></a>4.2 知识点：</h2><p><strong>best response</strong>：当对手选择某策略时，我能最大化我的利益的策略被称为best response。</p>
+<h1 id="Lesson-5-纳什均衡之坏风气与银行挤兑"><a href="#Lesson-5-纳什均衡之坏风气与银行挤兑" class="headerlink" title="Lesson 5:纳什均衡之坏风气与银行挤兑"></a>Lesson 5:纳什均衡之坏风气与银行挤兑</h1><h2 id="5-1博弈案例"><a href="#5-1博弈案例" class="headerlink" title="5.1博弈案例"></a>5.1博弈案例</h2><p><strong>5.1.1双人纳什均衡案例</strong>: 玩家一选上中下，玩家二选左中右，收益如下。找出彼此对于对手每个策略的best response(图中用红色表示玩家一的best response,用蓝色表示玩家二的)，重合的位置就是纳什均衡点（右下）<br><img src=" /images/game_theory_lesson5.jpg " width="50%"> </p>
+<p><strong>5.1.2囚徒困境</strong>: 典型的囚徒困境，收益如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">隐瞒</th>
+<th align="center">坦诚</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>隐瞒</td>
+<td align="center">（1，1）</td>
+<td align="center">（-1，3）</td>
+</tr>
+<tr>
+<td>坦诚</td>
+<td align="center">（3，-1）</td>
+<td align="center">（0，0）</td>
+</tr>
+</tbody></table>
+<p><strong>分析:</strong> 纳什均衡是两者都选择坦诚.</p>
+<p><strong>5.1.3 纳什均衡不止一个</strong>:收益如下<br>(1,1)     (0,0)<br>(0,0)     (0,0)<br><strong>分析:</strong> 左上和右下都是纳什均衡点</p>
+<p><strong>5.1.4 投资博弈</strong>:<br>参与人: 全班同学<br>策略：投资10元或不投资<br>收益：不投资，则是0；90%以上都投资，则投资者得5元利润；否则投资者损失资金的10元<br>其他限定:相互不可交流<br><strong>分析：</strong> 两个纳什均衡点，无人投资或者全部投资。第一次实验结果一半一半，第二次实验只有10%的投了，第三次无人投资。推导出纳什均衡的第三个特性</p>
+<h2 id="5-2-知识点"><a href="#5-2-知识点" class="headerlink" title="5.2 知识点"></a>5.2 知识点</h2><p><strong>5.2.1纳什均衡</strong>：在一个博弈中，每个参与人都选取了相对于其他人的最佳策略,纳什均衡有如下特点:</p>
+<ul>
+<li>No regret:如果其他人不改变策略，此时自己改变策略没有任何好处。比如博弈结束，每个人都发现对方的策略是纳什均衡点。当有人有机会改变策略时，他不会反悔改变策略</li>
+<li>self-fulfilling beliefs 如果我相信博弈会这样发展，那博弈就会这样发展。如果我相信纳什均衡会发生，那我的策略就是纳什均衡点，而对手的best response也会是纳什均衡点，进而形成纳什均衡</li>
+<li>博弈会朝着纳什均衡点发展</li>
+</ul>
+<p>严格劣势的策略不会是纳什均衡: 因为纳什均衡点必然是best response,而严格劣势的策略,在任何情况下都不会是best response  </p>
+<p><strong>5.2.2 Coordination game</strong>: 博弈中存在多个纳什均衡点,而人们需要合作才能达到较好的那个均衡点</p>
+<p>实例:  </p>
+<ul>
+<li>举办派对：每人可以选择来或者不来。纳什均衡存在于大家都来或者大家都不来。</li>
+<li>暧昧期：两人可以选择主动推进关系或者啥也不干。纳什均衡存在于最后大家在一起了或者一直处于暧昧期</li>
+<li>微软的垄断：软件开发者可以选择自己的产品是否适配windows系统。纳什均衡存在于大家都适配了或者大家都没有适配。</li>
+<li>银行挤兑：存钱者可以选择是否把存进银行的钱取出来。好的纳什均衡：大家都把钱存银行，经济环境就好；不好的纳什均衡：大家都把钱取回来，金融危机。</li>
+</ul>
+<p>囚徒困境和协和问题的区别：囚徒困境有劣势策略，而这个没有。因此囚徒困境只有一个均衡点,而协和问题有两个。所以囚徒困境只能通过合同来达到好的效果，而协和问题只需沟通即可（比如存钱的例子，只需要有人发表演讲让大家都存钱），因此协和问题是self-enforcing agreement。</p>
 
       
       <blockquote>
