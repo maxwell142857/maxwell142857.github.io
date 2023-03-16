@@ -23,8 +23,9 @@
 <meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson4_soccer.jpg">
 <meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson4_balance.jpg">
 <meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson5.jpg">
+<meta property="og:image" content="http://maxwell142857.github.io/images/game_theory_lesson5.jpg">
 <meta property="article:published_time" content="2023-03-05T12:55:38.000Z">
-<meta property="article:modified_time" content="2023-03-13T14:49:41.618Z">
+<meta property="article:modified_time" content="2023-03-16T15:08:13.492Z">
 <meta property="article:author" content="Maxwell">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://maxwell142857.github.io/images/game_theory_lesson3.jpg">
@@ -176,7 +177,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-10.png" style="max-height: 240px;">
+      <img src="/images/random/material-15.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">博弈论</div>
@@ -360,6 +361,75 @@
 <li>银行挤兑：存钱者可以选择是否把存进银行的钱取出来。好的纳什均衡：大家都把钱存银行，经济环境就好；不好的纳什均衡：大家都把钱取回来，金融危机。</li>
 </ul>
 <p>囚徒困境和协和问题的区别：囚徒困境有劣势策略，而这个没有。因此囚徒困境只有一个均衡点,而协和问题有两个。所以囚徒困境只能通过合同来达到好的效果，而协和问题只需沟通即可（比如存钱的例子，只需要有人发表演讲让大家都存钱），因此协和问题是self-enforcing agreement。</p>
+<h1 id="Lesson-6：纳什均衡之约会游戏与古诺模型"><a href="#Lesson-6：纳什均衡之约会游戏与古诺模型" class="headerlink" title="Lesson 6：纳什均衡之约会游戏与古诺模型"></a>Lesson 6：纳什均衡之约会游戏与古诺模型</h1><h2 id="6-1博弈案例"><a href="#6-1博弈案例" class="headerlink" title="6.1博弈案例"></a>6.1博弈案例</h2><p><strong>6.1.1性别大战</strong>：一对情侣去看电影，但忘记约定好看哪个电影了，每个人都有三个电影作为策略，收益如下(参与人1从竖列选，收益为第一个数字，他更偏向BU；参与人2更偏向GS。两人都不喜欢SW)：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>BU</th>
+<th>GS</th>
+<th>SW</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BU</td>
+<td>2，1</td>
+<td>0，0</td>
+<td>0，-1</td>
+</tr>
+<tr>
+<td>GS</td>
+<td>0，0</td>
+<td>1，2</td>
+<td>0，-1</td>
+</tr>
+<tr>
+<td>SW</td>
+<td>-1，0</td>
+<td>-1，0</td>
+<td>-2，-2</td>
+</tr>
+</tbody></table>
+<p><strong>分析</strong>：SW是劣势策略，双方都不会选，因此收益表直接变成2*2，不考虑SW的行和列。于是本博弈存在两个纳什均衡，即两人选相同的电影，但两者利益有冲突。</p>
+<p><strong>6.1.2古诺寡头模型</strong>：博弈者：两家公司生产同一个类型的产品，两个产品对于消费者来说等价。博弈策略：产品的产量q。总成本：cost * q。商品单价：a-b*（q1+q2），其中a和b都为参数，q1和q2为两个公司的产量。某公司的利润为（price-cost）*q</p>
+<p><strong>分析</strong>：分析方式同4.1.2,先写出公司一的利润为：f(q1) &#x3D; -bq1^2 +(a-bq2-c)q1 ,令一阶导数为0则可知q1&#x3D;(a-c)&#x2F;2b-q2&#x2F;2<br>作出图如下：  </p>
+<img src=" /images/game_theory_lesson5.jpg " width="50%">   
+
+<p>其中”点2“（两条黑线的交点）为纳什均衡点（该点也被称为古诺产量）。  </p>
+<p>考虑只有一个公司垄断的情况，则f(q) &#x3D; -bq^2^ +(a-c)q，利润的最大的产量为(a-c)&#x2F;2b，即为图中”点3“，公司垄断的时候  </p>
+<p>上面分析的是垄断的情况，也可以视为整个行业最大利润的情况。即：只要两个公司的产量总和为(a-c)&#x2F;2b，则整个行业利润最大（如图中蓝线所示）。又因为两个公司产量应该相同，所以每个公司的产量应为（a-c）&#x2F;4b，即为图中的”点1“。  </p>
+<p>这三个点的利润计算如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>产量</th>
+<th>利润</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>点1（合作）</td>
+<td>(a-c)&#x2F;4b</td>
+<td>(a-c)^2&#x2F;8b</td>
+</tr>
+<tr>
+<td>点2（古诺产量）</td>
+<td>(a-c)&#x2F;3b</td>
+<td>(a-c)^2&#x2F;9b</td>
+</tr>
+<tr>
+<td>点3（垄断）</td>
+<td>(a-c)&#x2F;2b</td>
+<td>(a-c)^2&#x2F;4b</td>
+</tr>
+</tbody></table>
+<p>可以看出，除非垄断的情况，否则两个公司合作的利润，是高于古诺产量的。但为何现实生活中并不存在这样的情况呢？  </p>
+<ul>
+<li>首先这个协议是违法的，虽然我不太懂，但似乎法律禁止公司间签署限制产量的合同。  </li>
+<li>即使这个合同受法律保护，大家也会有偷偷生产的倾向，去找各自的best response。最终又会回到纳什均衡点  </li>
+<li>即使合同有效，并且双方都严格遵守，那就会有第三个公司加入这个市场，因为依然有利可图。实例：OPEC（石油输出国组织），几个石油出口国签订协议，限制石油总产量。结果有更多的国家开始出口石油了。</li>
+</ul>
+<h2 id="6-2-知识点"><a href="#6-2-知识点" class="headerlink" title="6.2 知识点"></a>6.2 知识点</h2><p><strong>6.2.1策略互补博弈</strong>：别人做的越多，你也会做的越多（比如之前的合伙人博弈4.1.2）<br><strong>6.2.2策略代替博弈</strong>：别人投入越多，你就投的越少（别人投的代替了我投的，比如古诺寡头模型6.1.2）</p>
 
       
       <blockquote>
